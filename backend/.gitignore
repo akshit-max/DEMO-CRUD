@@ -1,0 +1,16 @@
+node_modules/
+.env
+.env.local
+.env.production
+
+npm-debug.log*
+yarn-error.log*
+
+dist/
+build/
+
+.vscode/
+.idea/
+.firebase/
+.firebaserc
+firebase-service.json
