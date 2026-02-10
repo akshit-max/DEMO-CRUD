@@ -33,34 +33,33 @@ Authentication is handled using **Firebase Google Authentication**.
 
 ## 📁 Project Structure
 
+```text
 DEMO-CRUD/
 ├── backend/
-│ ├── src/
-│ │ ├── config/
-│ │ ├── controllers/
-│ │ ├── middleware/
-│ │ ├── models/
-│ │ └── routes/
-│ ├── server.js
-│ ├── package.json
-│ ├── .env.example
-│ └── .gitignore
+│   ├── src/
+│   │   ├── config/
+│   │   ├── controllers/
+│   │   ├── middleware/
+│   │   ├── models/
+│   │   └── routes/
+│   ├── server.js
+│   ├── package.json
+│   ├── .env.example
+│   └── .gitignore
 │
 ├── frontend/
-│ ├── src/
-│ │ ├── pages/
-│ │ ├── types/
-│ │ ├── api.ts
-│ │ └── firebase.ts
-│ ├── public/
-│ ├── package.json
-│ ├── .env.example
-│ └── .gitignore
+│   ├── src/
+│   │   ├── pages/
+│   │   ├── types/
+│   │   ├── api.ts
+│   │   └── firebase.ts
+│   ├── public/
+│   ├── package.json
+│   ├── .env.example
+│   └── .gitignore
 │
 └── README.md
 
-yaml
-Copy code
 
 ---
 
