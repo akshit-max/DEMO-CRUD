@@ -1,11 +1,9 @@
 import admin from "firebase-admin";
-import { createRequire } from "module";
 
-const require = createRequire(import.meta.url);
-const serviceAccount = require("../../firebase-service.json");
-
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-});
+if (!admin.apps.length) {
+  admin.initializeApp({
+    projectId: process.env.FIREBASE_PROJECT_ID,
+  });
+}
 
 export default admin;
