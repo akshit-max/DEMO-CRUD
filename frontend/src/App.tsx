@@ -9,11 +9,9 @@ const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, async (user) => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        const token = await user.getIdToken();
-        localStorage.setItem("token", token);
-        setLoggedIn(true);
+        setLoggedIn(true); 
       } else {
         setLoggedIn(false);
         localStorage.removeItem("token");
@@ -23,6 +21,17 @@ const App = () => {
 
     return () => unsubscribe();
   }, []);
+
+ 
+  useEffect(() => {
+    const saveToken = async () => {
+      if (auth.currentUser) {
+        const token = await auth.currentUser.getIdToken();
+        localStorage.setItem("token", token);
+      }
+    };
+    if (loggedIn) saveToken();
+  }, [loggedIn]);
 
   if (loading) return <h3>Loading auth…</h3>;
 
